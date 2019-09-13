@@ -5,8 +5,7 @@ use yii\widgets\DetailView;
 $this->params['breadcrumbs'][] = ['label' => 'Список ярлыков', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $model->name;
 ?>
-
-<div class="post-view">
+<div class="label-view">
 
     <h1><?= Html::encode($model->name) ?></h1>
 
