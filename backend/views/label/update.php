@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 $this->params['breadcrumbs'][] = ['label' => 'Список ярлыков', 'url' => ['index']];
 $this->params['breadcrumbs'][] = 'Редактировать ярлык';
 ?>
-<div class="label-create">
+<div class="label-update">
 
     <h1>Редактировать ярлык</h1>
 

@@ -4,8 +4,7 @@ use yii\helpers\Html;
 
 $this->params['breadcrumbs'][] = 'Список ярлыков';
 ?>
-
-<div class="post-index">
+<div class="label-index">
 
     <div class="row">
         <div class="col-md-6">
