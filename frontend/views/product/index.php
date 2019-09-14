@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = 'Продукты';
                                 <div style="background-color:red; margin:0 0 0 15px; padding:3px 8px; position:absolute; left:0; top:0;">Actions</div>
                                 <div style="padding:100px 0 0 0;">
                                     ID: <?=$pr->id?> <br/>
+                                    Артикул: <?=(isset($pr->code) && !empty($pr->code) ? $pr->code : 'Нет')?> <br/>
 
                                     <!-- TODO: добавить привязку Акций к продукту и отображение -->
                                     <a href="/product/view/<?=$pr->id?>"><?=$pr->name?></a>

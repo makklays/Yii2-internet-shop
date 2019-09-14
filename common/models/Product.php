@@ -31,7 +31,7 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'code'], 'required'],
             [['weight', 'is_active', 'is_delete', 'created_at', 'modified_at'], 'integer'],
             [['name'], 'string', 'max' => 255],
             [['code'], 'string', 'max' => 32],
@@ -46,7 +46,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Название',
-            'code' => 'Код',
+            'code' => 'Артикул',
             'weight' => 'Вес',
             'is_active' => 'Активен',
             'is_delete' => 'Удален',
