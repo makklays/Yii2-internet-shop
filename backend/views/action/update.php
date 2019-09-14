@@ -37,6 +37,7 @@ $this->params['breadcrumbs'][] = 'Редактировать акцию';
             <?= $form->field($model, 'from_date')->widget( DatePicker::classname(), [
                 'options' => ['placeholder' => 'Дата начала ...'],
                 'language' => 'ru',
+                'type' => DatePicker::TYPE_COMPONENT_APPEND,
                 'pluginOptions' => [
                     'autoclose'=>true,
                     'format' => 'yyyy-mm-dd'
@@ -48,6 +49,8 @@ $this->params['breadcrumbs'][] = 'Редактировать акцию';
             <?= $form->field($model, 'to_date')->widget( DatePicker::classname(), [
                 'options' => ['placeholder' => 'Дата завершения ...'],
                 'language' => 'ru',
+                'type' => DatePicker::TYPE_COMPONENT_APPEND, // расположение иконки клендаря
+                //'type' => DatePicker::TYPE_COMPONENT_PREPEND,
                 'pluginOptions' => [
                     'autoclose'=>true,
                     'format' => 'yyyy-mm-dd'
