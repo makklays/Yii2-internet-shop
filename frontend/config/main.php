@@ -39,8 +39,12 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            /*'rules' => [
-            ],*/
+            'rules' => [
+                '' => 'site/index',
+                'product/<page:\d+>' => 'product/index',
+                'product/view/<id:\d+>' => 'product/view',
+                '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+            ],
         ],
     ],
     'params' => $params,

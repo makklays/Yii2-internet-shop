@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = 'Редактировать акцию';
             -->
             <?= $form->field($model, 'from_date')->widget( DatePicker::classname(), [
                 'options' => ['placeholder' => 'Дата начала ...'],
+                'language' => 'ru',
                 'pluginOptions' => [
                     'autoclose'=>true,
                     'format' => 'yyyy-mm-dd'
@@ -46,6 +47,7 @@ $this->params['breadcrumbs'][] = 'Редактировать акцию';
         <div class="col-md-4">
             <?= $form->field($model, 'to_date')->widget( DatePicker::classname(), [
                 'options' => ['placeholder' => 'Дата завершения ...'],
+                'language' => 'ru',
                 'pluginOptions' => [
                     'autoclose'=>true,
                     'format' => 'yyyy-mm-dd'

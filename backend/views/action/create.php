@@ -32,9 +32,11 @@ $this->params['breadcrumbs'][] = 'Добавить акцию';
 
                 <?= $form->field($model, 'from_date')->widget( DatePicker::classname(), [
                     'options' => ['placeholder' => 'Дата начала ...'],
+                    'language' => 'ru',
                     'pluginOptions' => [
                         'autoclose'=>true,
-
+                        'format' => 'yyyy-mm-dd',
+                        'todayHighlight' => true,
                     ]
                 ]); ?>
             </div>
@@ -45,9 +47,11 @@ $this->params['breadcrumbs'][] = 'Добавить акцию';
 
                 <?= $form->field($model, 'to_date')->widget( DatePicker::classname(), [
                     'options' => ['placeholder' => 'Дата завершения ...'],
+                    'language' => 'ru',
                     'pluginOptions' => [
                         'autoclose'=>true,
-
+                        'format' => 'yyyy-mm-dd',
+                        'todayHighlight' => true,
                     ]
                 ]); ?>
             </div>
