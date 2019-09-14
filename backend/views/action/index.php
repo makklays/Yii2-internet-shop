@@ -10,11 +10,19 @@ $this->params['breadcrumbs'][] = 'Список акций';
 <div class="label-index">
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
             <h1 style="margin:0;">Список акций</h1>
         </div>
-        <div class="col-md-6" style="margin:5px 0 0 0 ;">
+        <div class="col-md-3" style="margin:5px 0 0 0 ;">
             <?= Html::a('Добавить акцию', ['create'], ['class' => 'btn btn-success']) ?>
+        </div>
+        <div class="col-md-6">
+            <form action="/action" method="get" class="navbar-form navbar-left" >
+                <div class="form-group">
+                    <input name="search" type="text" class="form-control" style="width:400px;" value="<?=(isset($_GET['search']) && !empty($_GET['search']) ? $_GET['search'] : '')?>" placeholder="По названию, описанию.. " />
+                </div>
+                <input type="submit" class="btn btn-default" value="Поиск" />
+            </form>
         </div>
     </div>
 
