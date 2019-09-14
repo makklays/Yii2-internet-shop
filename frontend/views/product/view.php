@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = 'Продукт - ' . $model->name;
         <div class="col-md-6">
             <br/><br/>
             ID: <?=$model->id?> <br/><br/>
-            Код: <?=(isset($model->code) && !empty($model->code) ? $model->code : '-')?> <br/><br/>
+            Артикул: <?=(isset($model->code) && !empty($model->code) ? $model->code : '-')?> <br/><br/>
             Вес: <?=(isset($model->weight) && !empty($model->weight) ? $model->weight : '-')?> <br/><br/>
             Активен: <?=(isset($model->is_active) && !empty($model->is_active) && $model->is_active == 1 ? '<span style="color:green;">Да</span>' : '<span style="color:red;">Нет</span>')?> <br/><br/>
         </div>

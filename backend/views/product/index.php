@@ -37,6 +37,19 @@ $this->params['breadcrumbs'][] = 'Список продуктов';
                 'contentOptions' => ['style' => 'text-align:center; width:100px; max-width:100px; min-width:100px;'],
                 'value' => 'id',
             ],*/
+            [
+                'format' => 'raw',
+                'attribute' => 'code',
+                'value' => function($dp) {
+                    if (isset($dp->code) && !empty($dp->code)) {
+                        return Html::decode($dp->code);
+                    } else {
+                        return '-';
+                    }
+                },
+                'headerOptions' => ['style' => 'width:110px; text-align:center;'],
+                'contentOptions' => ['style' => 'text-align:center;'],
+            ],
             //'name',
             [
                 'format' => 'raw',
@@ -51,19 +64,6 @@ $this->params['breadcrumbs'][] = 'Список продуктов';
                         ]
                     );
                 },
-            ],
-            [
-                'format' => 'raw',
-                'attribute' => 'code',
-                'value' => function($dp) {
-                    if (isset($dp->code) && !empty($dp->code)) {
-                        return Html::decode($dp->code);
-                    } else {
-                        return '-';
-                    }
-                },
-                'headerOptions' => ['style' => 'width:110px; text-align:center;'],
-                'contentOptions' => ['style' => 'text-align:center;'],
             ],
             [
                 'format' => 'raw',
