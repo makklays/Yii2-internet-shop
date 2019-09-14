@@ -44,9 +44,10 @@ return [
             'rules' => [
                 '' => 'site/index',
                 'labels/index/<page:\d+>' => 'label/index',
-                'post/view/<id:\d+>' => 'post/view',
-                'post/update/<id:\d+>' => 'post/update',
-
+                'actions/<page:\d+>' => 'action/index',
+                'product/<page:\d+>' => 'product/index',
+                //'post/view/<id:\d+>' => 'post/view',
+                //'post/update/<id:\d+>' => 'post/update',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

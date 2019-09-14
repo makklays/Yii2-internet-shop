@@ -21,6 +21,8 @@ $this->params['breadcrumbs'][] = 'Список ярлыков';
 
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
+    'layout' => "{summary}\n{items}\n{pager}",
+    'summary' => "Показано {begin} - {end} из {totalCount}",
     'columns' => [
         /*[
             'class' => 'yii\grid\SerialColumn',
@@ -51,7 +53,8 @@ $this->params['breadcrumbs'][] = 'Список ярлыков';
             'value' => function($dataProvider) {
                 return Html::decode('<div style="height:20px; background-color: '.$dataProvider->color_text.';" > '.$dataProvider->color_text.' </div>');
             },
-            'headerOptions' => ['style' => 'width:110px;'],
+            'headerOptions' => ['style' => 'width:110px; text-align:center;'],
+            'contentOptions' => ['style' => 'text-align:center;'],
         ],
         [
             'format' => 'raw',
@@ -59,19 +62,20 @@ $this->params['breadcrumbs'][] = 'Список ярлыков';
             'value' => function($dataProvider) {
                 return Html::decode($dataProvider->is_active == 1 ? '<span style="color:green;">Да</span>' : '<span class="not-set">Нет</span>');
             },
-            'headerOptions' => ['style' => 'width:110px;'],
+            'headerOptions' => ['style' => 'width:110px; text-align:center;'],
+            'contentOptions' => ['style' => 'text-align:center;'],
         ],
-        [
+        /*[
             'format' => 'raw',
             'attribute' => 'is_delete',
             'value' => function($dataProvider) {
                 return Html::decode($dataProvider->is_delete == 1 ? '<span style="color:green;">Да</span>' : '<span class="not-set">Нет</span>');
             },
             'headerOptions' => ['style' => 'width:110px;'],
-        ],
+        ],*/
         [
             'class' => 'yii\grid\ActionColumn',
-            'header' => 'Action', // заголовок столбца
+            'header' => 'Действия', // заголовок столбца
             'headerOptions' => ['style' => 'text-align:center; width:90px;'],
             'contentOptions' => ['style' => 'text-align:center;'],
         ],
