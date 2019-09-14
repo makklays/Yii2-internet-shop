@@ -32,7 +32,8 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'code'], 'required'],
-            [['weight', 'is_active', 'is_delete', 'created_at', 'modified_at'], 'integer'],
+            [['created_at', 'modified_at'], 'datetime', 'format' => 'php:Y-m-d H:i:s'],
+            [['weight', 'is_active', 'is_delete'], 'integer'],
             [['name'], 'string', 'max' => 255],
             [['code'], 'string', 'max' => 32],
         ];
