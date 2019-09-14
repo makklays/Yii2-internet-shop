@@ -15,12 +15,15 @@ class ActionController extends Controller
             return $this->goHome();
         }
 
-        $query = Action::find();
-
-        /*echo '<pre>';
-        print_r($query->label);
-        echo '</pre>';
-        exit;*/
+        // по части в названии и описании
+        $search = Yii::$app->request->get('search');
+        if (isset($search) && !empty($search)) {
+            $query = Action::find();
+            $query->where(['like', 'name', $search]);
+            $query->orWhere(['like', 'description', $search]);
+        } else {
+            $query = Action::find();
+        }
 
         /*$query = Action::find()
             ->select(['action.*', 'l.name as label_name'])
@@ -61,26 +64,9 @@ class ActionController extends Controller
             $model->to_date = $b['to_date']; // strtotime(
 
             if ($model->validate()) {
-                //$file_name = $this->pic->baseName . '.' . $this->pic->extension;
-                //$this->pic->saveAs('uploads/pics/'.$model->id .'/'.$file_name);
-
-                //$model->from_date = strtotime($model->from_date);
-                //$model->to_date = strtotime($model->to_date);
-
-                /*echo '<pre>';
-                print_r($model);
-                echo '</pre>';
-                exit; */
-
                 $model->save();
 
-                /*
-                $file = UploadedFile::getInstance($model, 'pic');
-                $filename = $file->baseName . '.' . $file->extension;
-                $file->saveAs(Yii::$app->basePath . '/web/uploads/pics/' . $filename);
-                $model->pic = $filename;
-                $model->save(); */
-
+                // upload image
                 $model->uploadImage();
 
                 return $this->redirect('/actions/1');
@@ -112,17 +98,9 @@ class ActionController extends Controller
             $model->to_date = $b['to_date']; // strtotime(
 
             if ($model->validate()) {
-                // form inputs are valid, do something here
-                //$request = Yii::$app->request->post('Action');
-                /*echo '<pre>';
-                print_r($request['from_date']);
-                echo '</pre>';
-                exit; */
-
+                // upload image
                 $model->uploadImage($prev_pic);
 
-                //$model->from_date = strtotime($request['from_date']);
-                //$model->to_date = strtotime($request['to_date']);
                 $model->save();
 
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -147,24 +125,4 @@ class ActionController extends Controller
         Action::findOne($id)->delete();
         return $this->redirect(['index']);
     }
-
-    /*public function uploadPicture(Action $model)
-    {
-        // add directory
-        $path = Yii::$app->basePath . '/web/uploads/pics/' . $model->id;
-        if (!file_exists($path)) {
-            mkdir($path, 0700);
-        }
-
-        // upload file
-        $file = UploadedFile::getInstance($model, 'pic');
-        if (isset($file->baseName) && !empty($file->baseName)) {
-            $filename = $file->baseName . '.' . $file->extension;
-            $file->saveAs(Yii::$app->basePath . '/web/uploads/pics/' . $model->id . '/' . $filename);
-            $model->pic = $filename;
-            //$model->save();
-        }
-
-        return $model->save();
-    }*/
 }
