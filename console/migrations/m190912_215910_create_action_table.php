@@ -35,10 +35,10 @@ class m190912_215910_create_action_table extends Migration
         $item->name = 'Акция 5%';
         $item->description = 'Это акция в 5% поспешите!';
         $item->pic = 'pic1.png';
-        $item->from_date = '2019-09-20'; //time();
-        $item->to_date = '2019-09-30'; //( time() + ( 60 * 60 * 24 * 10 ) );
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->from_date = '2019-09-20';
+        $item->to_date = '2019-09-30';
+        $item->created_at = '2019-09-01 08:00:00';
+        $item->modified_at = '2019-09-01 08:00:00';
         $item->save();
 
         $item = new Action();
@@ -46,10 +46,10 @@ class m190912_215910_create_action_table extends Migration
         $item->name = 'Супер Акция!';
         $item->description = 'Это СУПЕР Акция - поспешите!';
         $item->pic = 'pic2.png';
-        $item->from_date = '2019-09-10'; //time();
+        $item->from_date = '2019-09-10';
         $item->to_date = '2019-09-22'; //( time() + ( 60 * 60 * 24 * 10 ) );
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-01 08:00:00';
+        $item->modified_at = '2019-09-01 08:00:00';
         $item->save();
     }
 

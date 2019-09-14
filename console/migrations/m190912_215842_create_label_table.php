@@ -29,16 +29,40 @@ class m190912_215842_create_label_table extends Migration
         $label->name = 'Label 1';
         $label->color_bg = '#DDD';
         $label->color_text = '#245';
-        //$label->created_at = '2019-09-10 10:10:10';
-        //$label->modified_at = '2019-09-10 10:10:10';
+        $label->created_at = '2019-09-14 16:00:00';
+        $label->modified_at = '2019-09-14 16:00:00';
         $label->save();
 
         $label = new Label();
-        $label->name = 'Label 2';
+        $label->name = 'Якорь';
         $label->color_bg = '#fedede';
         $label->color_text = '#975';
-        //$label->created_at = '2019-09-10 10:10:10';
-        //$label->modified_at = '2019-09-10 10:10:10';
+        $label->created_at = '2019-09-14 16:00:00';
+        $label->modified_at = '2019-09-14 16:00:00';
+        $label->save();
+
+        $label = new Label();
+        $label->name = 'Красный';
+        $label->color_bg = 'red';
+        $label->color_text = 'white';
+        $label->created_at = '2019-09-14 16:00:00';
+        $label->modified_at = '2019-09-14 16:00:00';
+        $label->save();
+
+        $label = new Label();
+        $label->name = 'Зеленый';
+        $label->color_bg = 'green';
+        $label->color_text = 'red';
+        $label->created_at = '2019-09-14 16:00:00';
+        $label->modified_at = '2019-09-14 16:00:00';
+        $label->save();
+
+        $label = new Label();
+        $label->name = 'Оранжевый';
+        $label->color_bg = 'orange';
+        $label->color_text = 'red';
+        $label->created_at = '2019-09-14 16:00:00';
+        $label->modified_at = '2019-09-14 16:00:00';
         $label->save();
     }
 

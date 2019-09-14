@@ -38,8 +38,9 @@ class Action extends \yii\db\ActiveRecord
     {
         return [
             [['label_id', 'name', 'from_date', 'to_date'], 'required'],
-            [['label_id', 'is_active', 'is_delete', 'created_at', 'modified_at'], 'integer'],
-            [[ 'description'], 'string'],
+            [['created_at', 'modified_at'], 'datetime', 'format' => 'php:Y-m-d H:i:s'],
+            [['label_id', 'is_active', 'is_delete'], 'integer'],
+            [['description'], 'string'],
             [['name', 'pic'], 'string', 'max' => 255],
             [['code'], 'string', 'max' => 32],
         ];

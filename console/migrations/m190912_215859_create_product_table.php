@@ -26,105 +26,119 @@ class m190912_215859_create_product_table extends Migration
 
         $item = new Product();
         $item->name = 'Мыло хозяйственное 78%';
+        $item->code = 'ART-0001';
         $item->weight = 100;
         $item->is_active = 0;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 2';
+        $item->code = '453-60-01';
         $item->weight = 100;
-        //$item->created_at = date('Y-m-d H:i:s');
-        //$item->modified_at = date('Y-m-d H:i:s');
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 1';
+        $item->code = 'code-01';
         $item->weight = 200;
         $item->is_active = 0;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 3';
+        $item->code = 'code-011';
         $item->weight = 200;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 4';
+        $item->code = 'art-code-0004';
         $item->weight = 300;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 5';
+        $item->code = 'art-code-0005';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 6';
+        $item->code = 'art-code-0006';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 8';
+        $item->code = 'art-code-0008';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 7';
+        $item->code = 'art-code-0007';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 10';
+        $item->code = 'art-code-0010';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 9';
+        $item->code = 'art-code-0009';
         $item->weight = 8;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 11';
+        $item->code = 'art-code-0011';
         $item->weight = 8;
         $item->is_active = 0;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 12';
+        $item->code = 'art-code-0012';
         $item->weight = 8;
         $item->is_active = 1;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
         $item->name = 'Продукт 13';
+        $item->code = 'art-code-0013';
         $item->weight = 8;
         $item->is_active = 1;
-        //$item->created_at = date('Y-m-d H:i:s', time());
-        //$item->modified_at = date('Y-m-d H:i:s', time());
+        $item->created_at = '2019-09-14 16:00:00';
+        $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
     }
 
