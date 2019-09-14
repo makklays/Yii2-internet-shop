@@ -2,6 +2,7 @@
 namespace common\models;
 
 use Yii;
+use common\models\Action;
 
 /**
  * This is the model class for table "label".
@@ -51,10 +52,15 @@ class Label extends \yii\db\ActiveRecord
             'color_bg' => 'Цвет фона',
             'color_text' => 'Цвет текста',
             'code' => 'Код',
-            'is_active' => 'Активность',
+            'is_active' => 'Активен',
             'is_delete' => 'Удален',
-            'created_at' => 'Добавлено',
-            'modified_at' => 'Модифицировано',
+            'created_at' => 'Добавлен',
+            'modified_at' => 'Модифицирован',
         ];
+    }
+
+    public function getAction()
+    {
+        return $this->hasMany(Action::className(), ['label_id' => 'id'] );
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 $this->params['breadcrumbs'][] = ['label' => 'Список ярлыков', 'url' => ['index']];
@@ -23,14 +24,15 @@ $this->params['breadcrumbs'][] = 'Добавить ярлык';
                 <?= $form->field($model, 'color_text') ?>
 
                 <?= $form->field($model, 'is_active')->dropDownList([
-                    '1' => 'Активный',
-                    '0' => 'Отключен',
+                    '1' => 'Да',
+                    '0' => 'Нет',
                 ]) ?>
 
             </div>
         </div>
 
         <div class="form-group">
+            <?= Html::a('Отменить', Url::to(['/label/']), ['style' => 'margin:0 30px 0 0;']) ?>
             <?= Html::submitButton('Добавить', ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>

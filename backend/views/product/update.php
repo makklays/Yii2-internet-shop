@@ -4,12 +4,12 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
-$this->params['breadcrumbs'][] = ['label' => 'Список ярлыков', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Редактировать ярлык';
+$this->params['breadcrumbs'][] = ['label' => 'Список продуктов', 'url' => ['index']];
+$this->params['breadcrumbs'][] = 'Редактировать продукт';
 ?>
-<div class="label-update">
+<div class="label-create">
 
-    <h1>Редактировать ярлык</h1>
+    <h1>Редактировать продукт</h1>
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -17,20 +17,19 @@ $this->params['breadcrumbs'][] = 'Редактировать ярлык';
         <div class="col-md-6">
             <?= $form->field($model, 'name') ?>
 
-            <?= $form->field($model, 'color_bg') ?>
+            <?= $form->field($model, 'code') ?>
 
-            <?= $form->field($model, 'color_text') ?>
+            <?= $form->field($model, 'weight') ?>
 
             <?= $form->field($model, 'is_active')->dropDownList([
                 '1' => 'Да',
                 '0' => 'Нет',
             ]) ?>
-
         </div>
     </div>
 
     <div class="form-group">
-        <?= Html::a('Отменить', Url::to(['/label/']), ['style' => 'margin:0 30px 0 0;']) ?>
+        <?= Html::a('Отменить', Url::to(['/product/']), ['style' => 'margin:0 30px 0 0;']) ?>
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>

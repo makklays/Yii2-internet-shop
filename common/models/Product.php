@@ -48,10 +48,10 @@ class Product extends \yii\db\ActiveRecord
             'name' => 'Название',
             'code' => 'Код',
             'weight' => 'Вес',
-            'is_active' => 'Активность',
+            'is_active' => 'Активен',
             'is_delete' => 'Удален',
-            'created_at' => 'Добавлено',
-            'modified_at' => 'Модифицировано',
+            'created_at' => 'Добавлен',
+            'modified_at' => 'Модифицирован',
         ];
     }
 }

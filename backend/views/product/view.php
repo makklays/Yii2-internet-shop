@@ -2,12 +2,12 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
-$this->params['breadcrumbs'][] = ['label' => 'Список ярлыков', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Ярлык - ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Список продуктов', 'url' => ['index']];
+$this->params['breadcrumbs'][] = 'Продукт - ' . $model->name;
 ?>
 <div class="label-view">
 
-    <h1>Ярлык - <?= Html::encode($model->name) ?></h1>
+    <h1>Продукт - <?= Html::encode($model->name) ?></h1>
 
     <p></p>
     <p>
@@ -26,28 +26,28 @@ $this->params['breadcrumbs'][] = 'Ярлык - ' . $model->name;
         'model' => $model,
         'attributes' => [
             //'id',
-            //'name',
-            [
+            'name',
+            /*[
                 'format' => 'raw',
                 'attribute' => 'Вид',
                 'value' => function($dp){
                     return '<div style="height:20px; color:'.$dp->color_text.'; background-color:'.$dp->color_bg.';" >'.$dp->name.'</div>';
                 }
-            ],
+            ],*/
             //'color_bg',
             [
                 'format' => 'raw',
-                'attribute' => 'color_bg',
+                'attribute' => 'code',
                 'value' => function($dp){
-                    return '<div style="height:20px; background-color: '.$dp->color_bg.';" ></div>';
+                    return (isset($dp->code) && !empty($dp->code) ? $dp->code : '-');
                 }
             ],
             //'color_text',
             [
                 'format' => 'raw',
-                'attribute' => 'color_text',
+                'attribute' => 'weight',
                 'value' => function($dp){
-                    return '<div style="height:20px; background-color: '.$dp->color_text.';" ></div>';
+                    return (isset($dp->weight) && !empty($dp->weight) ? $dp->weight : '-');
                 }
             ],
             [
