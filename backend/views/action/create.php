@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = 'Добавить акцию';
                 <?= $form->field($model, 'from_date')->widget( DatePicker::classname(), [
                     'options' => ['placeholder' => 'Дата начала ...'],
                     'language' => 'ru',
+                    'type' => DatePicker::TYPE_COMPONENT_APPEND,
                     'pluginOptions' => [
                         'autoclose'=>true,
                         'format' => 'yyyy-mm-dd',
@@ -47,6 +48,8 @@ $this->params['breadcrumbs'][] = 'Добавить акцию';
 
                 <?= $form->field($model, 'to_date')->widget( DatePicker::classname(), [
                     'options' => ['placeholder' => 'Дата завершения ...'],
+                    'type' => DatePicker::TYPE_COMPONENT_APPEND,
+                    //'type' => DatePicker::TYPE_COMPONENT_PREPEND,
                     'language' => 'ru',
                     'pluginOptions' => [
                         'autoclose'=>true,
