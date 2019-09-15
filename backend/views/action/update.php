@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = 'Редактировать акцию';
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton('Добавить', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 

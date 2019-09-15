@@ -26,17 +26,17 @@ class m190912_215842_create_label_table extends Migration
         ]);
 
         $label = new Label();
-        $label->name = 'Label 1';
-        $label->color_bg = '#DDD';
-        $label->color_text = '#245';
+        $label->name = 'Бесплатная доставка';
+        $label->color_bg = 'orange';
+        $label->color_text = 'white';
         $label->created_at = '2019-09-14 16:00:00';
         $label->modified_at = '2019-09-14 16:00:00';
         $label->save();
 
         $label = new Label();
-        $label->name = 'Якорь';
-        $label->color_bg = '#fedede';
-        $label->color_text = '#975';
+        $label->name = 'Скидка 5%';
+        $label->color_bg = '#DDD';
+        $label->color_text = '#245';
         $label->created_at = '2019-09-14 16:00:00';
         $label->modified_at = '2019-09-14 16:00:00';
         $label->save();
@@ -45,6 +45,7 @@ class m190912_215842_create_label_table extends Migration
         $label->name = 'Красный';
         $label->color_bg = 'red';
         $label->color_text = 'white';
+        $label->is_active = 0;
         $label->created_at = '2019-09-14 16:00:00';
         $label->modified_at = '2019-09-14 16:00:00';
         $label->save();
@@ -61,6 +62,7 @@ class m190912_215842_create_label_table extends Migration
         $label->name = 'Оранжевый';
         $label->color_bg = 'orange';
         $label->color_text = 'red';
+        $label->is_active = 0;
         $label->created_at = '2019-09-14 16:00:00';
         $label->modified_at = '2019-09-14 16:00:00';
         $label->save();

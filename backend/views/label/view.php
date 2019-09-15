@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = 'Ярлык - ' . $model->name;
         'model' => $model,
         'attributes' => [
             //'id',
-            //'name',
+            'name',
             [
                 'format' => 'raw',
                 'attribute' => 'Вид',

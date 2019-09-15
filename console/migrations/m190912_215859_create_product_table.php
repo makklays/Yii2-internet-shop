@@ -28,13 +28,13 @@ class m190912_215859_create_product_table extends Migration
         $item->name = 'Мыло хозяйственное 78%';
         $item->code = 'ART-0001';
         $item->weight = 100;
-        $item->is_active = 0;
+        $item->is_active = 1;
         $item->created_at = '2019-09-14 16:00:00';
         $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
-        $item->name = 'Продукт 2';
+        $item->name = 'Волшебная палочка';
         $item->code = '453-60-01';
         $item->weight = 100;
         $item->created_at = '2019-09-14 16:00:00';
@@ -42,16 +42,16 @@ class m190912_215859_create_product_table extends Migration
         $item->save();
 
         $item = new Product();
-        $item->name = 'Продукт 1';
+        $item->name = 'Шапка невидимка';
         $item->code = 'code-01';
         $item->weight = 200;
-        $item->is_active = 0;
+        $item->is_active = 1;
         $item->created_at = '2019-09-14 16:00:00';
         $item->modified_at = '2019-09-14 16:00:00';
         $item->save();
 
         $item = new Product();
-        $item->name = 'Продукт 3';
+        $item->name = 'Манка';
         $item->code = 'code-011';
         $item->weight = 200;
         $item->created_at = '2019-09-14 16:00:00';
@@ -110,6 +110,7 @@ class m190912_215859_create_product_table extends Migration
         $item->name = 'Продукт 9';
         $item->code = 'art-code-0009';
         $item->weight = 8;
+        $item->is_active = 0;
         $item->created_at = '2019-09-14 16:00:00';
         $item->modified_at = '2019-09-14 16:00:00';
         $item->save();

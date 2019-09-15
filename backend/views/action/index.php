@@ -72,7 +72,7 @@ $this->params['breadcrumbs'][] = 'Список акций';
                 if (isset($dp->label) && !empty($dp->label->name)) {
                     return Html::a(
                             $dp->label->name,
-                            Url::to(['/label/view', 'id' => $dp->id]),
+                            Url::to(['/label/view', 'id' => $dp->label->id]),
                             [
                                 'title' => $dp->label_id .'-'.$dp->label->name,
                                 //'target' => '_blank'

@@ -20,14 +20,15 @@ $this->params['breadcrumbs'][] = 'Продукты';
                     <?php foreach($products as $pr): ?>
                         <div class="col-md-3 text-center" style="margin-bottom:20px;">
                             <div style="vertical-align:bottom; height:200px; background-color:#adb5bd;">
-                                <div style="background-color:red; margin:0 0 0 15px; padding:3px 8px; position:absolute; left:0; top:0;">Actions</div>
+
+                                <!-- добавлено отображение привязанной акции с ярлыком -->
+                                <div style="<?=(isset($pr['color_bg']) ? 'background-color:'.$pr['color_bg'].';' : '')?> <?=(isset($pr['color_text']) ? 'color:'.$pr['color_text'].';' : '')?> margin:0 0 0 15px; padding:3px 8px; position:absolute; left:0; top:0;"><?=(isset($pr['label_name']) ? $pr['label_name'] : '')?></div>
+
                                 <div style="padding:100px 0 0 0;">
-                                    ID: <?=$pr->id?> <br/>
-                                    Артикул: <?=(isset($pr->code) && !empty($pr->code) ? $pr->code : 'Нет')?> <br/>
+                                    ID: <?=$pr['id']?> <br/>
+                                    Артикул: <?=(isset($pr['code']) && !empty($pr['code']) ? $pr['code'] : 'Нет')?> <br/>
 
-                                    <!-- TODO: добавить привязку Акций к продукту и отображение -->
-                                    <a href="/product/view/<?=$pr->id?>"><?=$pr->name?></a>
-
+                                    <a href="/product/view/<?=$pr['id']?>"><?=$pr['name']?></a>
                                 </div>
                             </div>
                         </div>

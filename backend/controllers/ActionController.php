@@ -2,6 +2,7 @@
 namespace backend\controllers;
 
 use common\models\Action;
+use common\models\ActionProduct;
 use common\models\Label;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -88,7 +89,7 @@ class ActionController extends Controller
         $labels = Label::find()->all();
         $label_options = [];
         foreach($labels as $lb){
-            $label_options[$lb->id] = $lb->name;
+            $label_options[$lb->id] = 'ID:' . $lb->id . ' - ' . $lb->name;
         }
 
         if ($model->load(Yii::$app->request->post())) {
@@ -115,8 +116,23 @@ class ActionController extends Controller
     public function actionView($id)
     {
         $model = Action::findOne(['id' => $id]);
+
+        $query2 = ActionProduct::find()->where(['action_id' => $id])->orderBy('modified_at DESC');
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query2,
+            'pagination' => [
+                'pageSize' => 10,
+            ]
+        ]);
+
+        /*echo '<pre>';
+        print_r($model);
+        echo '</pre>';
+        exit;*/
+
         return $this->render('view', [
             'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
