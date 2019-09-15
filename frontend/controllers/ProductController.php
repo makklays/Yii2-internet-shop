@@ -47,7 +47,7 @@ class ProductController extends Controller
                 ORDER BY p.name, ap.modified_at DESC
                 LIMIT '.$offset.', '.$per_page.'   '; */
 
-        $sql = 'SELECT * FROM product WHERE p.is_active = 1 ORDER BY p.name LIMIT '.$offset.', '.$per_page.' ';
+        $sql = 'SELECT * FROM product WHERE is_active = 1 ORDER BY name LIMIT '.$offset.', '.$per_page.' ';
         $products = Yii::$app->db->createCommand($sql)->queryAll();
 
         /* Перебираю привязанные акции к продукту выбираю активные акции с активными ярлыками
