@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = 'Добавить продукт';
 
     <div class="form-group">
         <?= Html::a('Отменить', Url::to(['/product/']), ['style' => 'margin:0 30px 0 0;']) ?>
-        <?= Html::submitButton('Добавить', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Добавить', ['class' => 'btn btn-success']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 
