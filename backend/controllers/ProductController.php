@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use common\models\ActionProduct;
 use common\models\Product;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -67,8 +68,18 @@ class ProductController extends Controller
     public function actionView($id)
     {
         $model = Product::findOne(['id' => $id]);
+
+        $query2 = ActionProduct::find()->where(['product_id' => $id])->orderBy('modified_at DESC');
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query2,
+            'pagination' => [
+                'pageSize' => 10,
+            ]
+        ]);
+
         return $this->render('view', [
             'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 

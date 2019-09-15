@@ -37,6 +37,15 @@ $this->params['breadcrumbs'][] = 'Список ярлыков';
             'value' => 'id',
         ],*/
         'name',
+        [
+            'format' => 'raw',
+            'attribute' => 'Вид',
+            'value' => function($dp) {
+                return '<div style="padding:0 0 0 5px; height:20px; color:'.$dp->color_text.'; background-color:'.$dp->color_bg.';" >'.$dp->name.'</div>';
+            },
+            'headerOptions' => ['style' => 'width:200px; text-align:center;'],
+            'contentOptions' => ['style' => 'text-align:left;'],
+        ],
         //'color_bg',
         [
             'format' => 'raw',
@@ -44,7 +53,8 @@ $this->params['breadcrumbs'][] = 'Список ярлыков';
             'value' => function($dataProvider) {
                 return Html::decode('<div style="height:20px; background-color: '.$dataProvider->color_bg.';" > '.$dataProvider->color_bg.' </div>');
             },
-            'headerOptions' => ['style' => 'width:110px;'],
+            'headerOptions' => ['style' => 'width:110px; text-align:center;'],
+            'contentOptions' => ['style' => 'text-align:center;'],
         ],
         //'color_text',
         [

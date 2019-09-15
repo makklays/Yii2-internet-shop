@@ -35,8 +35,8 @@ class m190912_215910_create_action_table extends Migration
         $item->name = 'Акция 5%';
         $item->description = 'Это акция в 5% поспешите!';
         $item->pic = 'pic1.png';
-        $item->from_date = '2019-09-20';
-        $item->to_date = '2019-09-30';
+        $item->from_date = '2019-09-13';
+        $item->to_date = '2019-09-20';
         $item->created_at = '2019-09-01 08:00:00';
         $item->modified_at = '2019-09-01 08:00:00';
         $item->save();

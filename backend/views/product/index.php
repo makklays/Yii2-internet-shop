@@ -55,14 +55,25 @@ $this->params['breadcrumbs'][] = 'Список продуктов';
                 'format' => 'raw',
                 'attribute' => 'name',
                 'value' => function($dp) {
-                    return Html::a(
-                        $dp->name,
-                        Url::to(['/product/view', 'id' => $dp->id]),
-                        [
-                            'title' => 'Детальнее',
-                            //'target' => '_blank'
-                        ]
-                    );
+                    if ($dp->is_active == 1) {
+                        return Html::a(
+                            $dp->name,
+                            Url::to(['/product/view', 'id' => $dp->id]),
+                            [
+                                'title' => 'Детальнее',
+                                //'target' => '_blank'
+                            ]
+                        );
+                    } else {
+                        return Html::a(
+                            $dp->name,
+                            Url::to(['/product/view', 'id' => $dp->id]),
+                            [
+                                'title' => 'Детальнее',
+                                'style' => 'color: grey;'
+                            ]
+                        );
+                    }
                 },
             ],
             [
